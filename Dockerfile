@@ -9,3 +9,7 @@ RUN apt update
 RUN apt install -y apache2
 RUN apt install -y php7.2 php7.2-common php7.2-cli php7.2-fpm
 RUN apt-get install -y libapache2-mod-php7.2
+EXPOSE 80
+EXPOSE 443
+
+CMD apachectl -D FOREGROUND
